@@ -1,0 +1,18 @@
+<button type="button" mdbBtn color="dark" mdbWavesEffect (click)="goBack()">Go back</button>
+<br><br>
+<div *ngIf="user">
+  <h3>{{ user.name | uppercase }}</h3>
+  <table mdbTable>
+    <tbody>
+      <tr mdbTableCol><td>Balance</td><td>{{ user.balance }}</td></tr>
+      <tr mdbTableCol><td>Picture</td><td><img src="{{ user.picture }}" alt="{{ user.name }}"></td></tr>
+      <tr mdbTableCol><td>Age</td><td>{{ user.age }}</td></tr>
+      <tr mdbTableCol><td>Email</td><td>{{ user.email }}</td></tr>
+      <tr mdbTableCol><td>Phone</td><td>{{ user.phone }}</td></tr>
+      <tr mdbTableCol><td>Address</td><td>{{ user.address }}</td></tr>
+      <tr mdbTableCol><td>About</td><td>{{ user.about }}</td></tr>
+      <tr mdbTableCol><td>Tags</td><td>{{ user.tags }}</td></tr>
+      <tr mdbTableCol><td>Registered</td><td>{{ user.registered | dateTimeFormat }}</td></tr>
+    </tbody>
+  </table>
+</div>
